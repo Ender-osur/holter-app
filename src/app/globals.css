@@ -3,5 +3,6 @@
 @tailwind utilities;
 
 body {
-  @apply bg-neutral-400;
+  @apply bg-neutral-950;
+  height: 100%;
 }
