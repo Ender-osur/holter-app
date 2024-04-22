@@ -9,8 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@headlessui/react": "^2.0.0-alpha.4",
     "@prisma/client": "^5.12.1",
-    "next": "14.2.1",
+    "next": "^14.3.0-canary.16",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.51.3"
