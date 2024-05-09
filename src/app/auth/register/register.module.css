@@ -1,0 +1,23 @@
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.font {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  font-size: 80px;
+  color: #53d9bf;
+}
+
+.main {
+  border: 1px solid white;
+}

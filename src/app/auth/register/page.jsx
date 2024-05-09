@@ -1,7 +1,10 @@
 "use client"
 import { useForm } from "react-hook-form"
-import "./styles.css"
+import styles from "./register.module.css"
 import Link from 'next/link'
+import Image from "next/image"
+
+import Button from "../../components/button"
 import FormField from "../../components/formField"
 
 export default function App() {
@@ -21,35 +24,39 @@ export default function App() {
     })
     const resJSON = await res.json()
     console.log(resJSON)
+    console.log(data)
   })
 
   return (
-    <div className="relative flex flex-col w-full h-full top-10 gap-10">
-      <main id="container-form" className="w-auto flex flex-col items-center">
-        <form onSubmit={onSubmit} className="w-1/2">
-          <fieldset>
-            <legend className="text-scale-200 font-bold text-4xl mb-4 bg-transparent text-slate-100">
-              Información de registro
-            </legend>
-            <FormField id="name" type="text" placeholder="Ingrese sus nombres" register={register} requiredMessage="Nombres requeridos" errors={errors} />
-            <FormField id="lastname" type="text" placeholder="apellidos" register={register} requiredMessage="Apellidos requeridos" errors={errors} />
-            <FormField id="email" type="email" placeholder="email@email.com" register={register} requiredMessage="email requerido" errors={errors} />
-            <FormField id="email-check" type="email" placeholder="email@email.com" register={register} requiredMessage="email requerido" errors={errors} />
-            <FormField id="password" type="password" placeholder="contraseña" register={register} requiredMessage="Contraseña requerida" errors={errors} />
-            <FormField id="password-check" type="password" placeholder="contraseña" register={register} requiredMessage="Contraseña requerida" errors={errors} />
+    <div className={`h-auto ${styles.container}`}>
+      <Image 
+            src="/img-logo-white.png" 
+            alt="Heart" 
+            width={160}
+            height={160}
+          />
+      <main className={`bg-white h-[800px] w-[500px] rounded-[80px] flex flex-col items-center ${styles.main}`}>
+        <h1 className={`  ${styles.font}`}>Hola</h1>
+        <form onSubmit={onSubmit} className="flex flex-col items-center">
+          <fieldset className="flex flex-col items-center">
+            <FormField id="name" type="text" placeholder="Nombres" register={register} requiredMessage="Nombres requeridos" errors={errors} label="" styles="" />
+            
+            <FormField id="lastname" type="text" placeholder="Apellidos" register={register} requiredMessage="Apellidos requeridos" errors={errors} label="" styles=""/>
+            <FormField id="email" type="email" placeholder="Correo" register={register} requiredMessage="email requerido" errors={errors} label="" styles=""/>
+            <FormField id="email-check" type="email" placeholder="Confirme su correo" register={register} requiredMessage="email requerido" errors={errors} label="" styles=""/>
+            <FormField id="password" type="password" placeholder="Contraseña" register={register} requiredMessage="Contraseña requerida" errors={errors} label="" styles=""/>
+            <FormField id="password-check" type="password" placeholder="Confirme su contraseña" register={register} requiredMessage="Contraseña requerida" errors={errors} label="" styles=""/>
+            <FormField id="password-check" type="password" placeholder="Confirme su contraseña" register={register} requiredMessage="Contraseña requerida" errors={errors} label="" styles=""/>
+            <FormField id="card-id" type="number" placeholder="Cédula" register={register} requiredMessage="Cédula requerida" errors={errors} label="" styles=""/>
           </fieldset>
-          <input type="submit" className="w-full text-slate-950 font-mono font-extrabold p-3 rounded-lg text-3xl mt-5" />
+          <Button id="submit_reg" content="Registrar" type="submit"/>
         </form>
       </main>
-      <footer className="flex justify-center">
         <div>
-          <span>
-            <Link href="/auth/login" className="text-slate-300 text-xl">
-              volver
+            <Link href="/" className="">
+              <Button id="goToHome" content="Volver a inicio" />
             </Link>
-          </span>
         </div>
-      </footer>
     </div>
   )
 }
