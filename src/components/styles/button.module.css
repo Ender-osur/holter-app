@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+/* 
+Usaremos el principio de "Mobile First" donde los estilos aplicados serán ajustados para dispositivos con width de
+menos de 768px y tendremos abajo las media queries para los otros tipos de screens
+*/
+
+/*
+Estilos transversales para todos los tipos de screens o dispositivos
+*/
+
+.mainButton {
+  background-color: #fff; 
+  color:#25775e; 
+  padding:0px 8px 0px 8px; 
+  border-radius: 20px;
+  border: 4px solid #2e8a71;
+  font-family: sans-serif;
+  font-weight: 600;
+  overflow: auto;
+}
+.secundaryButton {
+  height: max-content;
+  width: 150px;
+  font-size: 18px;
+  color: black;
+}
+.mainButton:active {
+  background-color:white;
+  color: #53d9bf;
+  transform: translateY(10px);
+}
+.secundaryButton:active {
+  color: #53d9bf;
+}
+/* Estilos para Mobile */
+@media (min-width: 0px) and (max-width: 767px) {
+  .mainButton {
+    font-size: 24px;
+    width: auto;
+    height: 60px;
+    box-shadow: 0px 3px 2px 2px rgba(0, 0, 0, 0.3);
+    margin: 0;
+  }
+
+  .secundaryButton {
+
+  }
+}
+
+/* Estilos para tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .mainButton {
+    font-size: 30px;
+    width: auto;
+    height: 60px;
+    overflow: auto;
+    box-shadow: 0px 4px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .secundaryButton {
+
+  }
+}
+
+/* Estilos para desktop */
+@media (min-width: 1024px) {
+  .mainButton {
+    font-size: 36px;
+    width: auto;
+    height: 95px;
+    box-shadow: 0px 4px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .secundaryButton {
+
+  }
+}

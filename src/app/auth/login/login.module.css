@@ -1,0 +1,61 @@
+.contain {
+  background-color: #53d9bf;
+}
+.font {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+  color: #53d9bf;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  height: 60%;
+  padding: 2%;
+}
+
+/* Estilos para Mobile */
+@media (min-width: 0px) and (max-width: 767px) {
+  .contain {
+    height: 100vh;
+  }
+  .font {
+    font-size: 80px;
+  }
+}
+/* Estilos para tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .contain {
+    height: 100vh;
+  }
+  .font {
+    font-size: 80px;
+  }
+  .main {
+    height: 50%;
+    width: 50%;
+    justify-content: center;
+    gap: 30px;
+  }
+}
+/* Estilos para desktop */
+@media (min-width: 1024px) {
+  .contain {
+    height: 100vh;
+  }
+  .font {
+    font-size: 80px;
+  }
+  .main {
+    display: flex;
+    height: 80%;
+    width: 40%;
+    justify-content: center;
+    gap: 30px;
+  }
+}

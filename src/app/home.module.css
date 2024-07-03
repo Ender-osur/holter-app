@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+/* 
+Usaremos el principio de "Mobile First" donde los estilos aplicados serán ajustados para dispositivos con width de
+menos de 768px y tendremos abajo las media queries para los otros tipos de screens
+*/
+
+/*
+Estilos transversales para todos los tipos de screens o dispositivos
+*/
+.container {
+  background-color: #53d9bf;
+  color: white;
+  height: 100vh;
+  width: auto;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  margin: 0;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.button {
+  background-color: #fff; 
+  color:#25775e; 
+  padding:0px 8px 0px 8px; 
+  border-radius: 20px;
+  border: 4px solid #2e8a71;
+  font-family: sans-serif;
+  font-weight: 600;
+  overflow: auto;
+}
+.button:active {
+  background-color:white;
+  color: #53d9bf;
+  transform: translateY(10px);
+}
+.helpLink {
+    color:white;
+}
+.helpLink:active {
+  color: red;
+}
+
+/* Estilos para Mobile */
+@media (min-width: 0px) and (max-width: 767px) {
+  .main {
+    height: 80%;
+    gap: 4%;
+  }
+  .title {
+    font-size: 10vw;
+  }
+  .heart {
+    height: 40%;
+    min-height: 100px;
+    width: auto; 
+  }
+  .button {
+    font-size: 24px;
+    width: auto;
+    height: 60px;
+    box-shadow: 0px 3px 2px 2px rgba(0, 0, 0, 0.3);
+    margin: 0;
+  }
+  .helpLink {
+      color:white;
+      font-size: 2.2rem;
+      font-weight: 300;
+  }
+}
+
+/* Estilos para tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main {
+    height: 90%;
+    gap: 3%;
+  }
+  .title {
+    font-size: 4.5rem;
+  }
+  .heart {
+    height: 48%;
+    min-height: 300px;
+    width: auto; 
+  }
+  .button {
+    font-size: 30px;
+    width: auto;
+    height: 60px;
+    overflow: auto;
+    box-shadow: 0px 4px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+  .helpLink {
+      font-size: 2.2rem;
+  }
+}
+
+/* Estilos para desktop */
+@media (min-width: 1024px) {
+  .main {
+    height: 100%;
+    gap: 3%;
+  }
+  .title {
+    font-size: 80px;
+    height: auto;
+  }
+  .heart {
+    height: 40%;
+    min-height: 200px;
+    width: auto; 
+  }
+  .button {
+    font-size: 36px;
+    width: auto;
+    height: 95px;
+    box-shadow: 0px 4px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+  .helpLink {
+      font-size: 2.2rem;
+  }
+}
